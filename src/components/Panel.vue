@@ -17,6 +17,7 @@ export default {
       default: "null"
     }
   },
+  inject: ['currentColor'],
   data() {
     return {
       colorCode: this.initialColorCode
@@ -24,10 +25,8 @@ export default {
   },
   methods: {
     changeColor () {
-      console.log("aaa")
-      this.colorCode = "#666666";
-
-      console.log(this.colorCode)
+      console.log(this.currentColor())
+      this.colorCode = this.currentColor();
     }
   }
 
@@ -38,10 +37,16 @@ export default {
 <style scoped>
 .panel {
 
-  padding: 2px 50px;
+  /* padding: 2px 50px; */
+  width: 100%;
+  height: 100%;  
+  display: table-cell; 
+  vertical-align: middle;
 }
 .text {
   font-size: 32px;
+  text-align: center;
+  vertical-align: middle;
 }
 </style>
 
