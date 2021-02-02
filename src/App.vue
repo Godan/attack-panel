@@ -2,15 +2,17 @@
   <div style="width: 100%; height: 100%;  margin: 2px;">
     <div v-for="cullentRow of row" :key="cullentRow" style="width: 100%; height: 20%;  margin: 2px;">
       <div class="panel-row" style="width: 100%; height: 100%;   ">
-        <div v-for="currentCol of col" :key="currentCol" style="width: 20%; height: 100%; margin: 2px 2px; display: table;" >
-          <Panel initialColorCode="#451278" :text="panelNumber(cullentRow, currentCol)" />
+        <div v-for="currentCol of col" :key="currentCol" style="width: 20%; height: 100%; margin: 4px 4px; display: table;" >
+          <Panel initialColorCode="#ffffff" :text="panelNumber(cullentRow, currentCol)" />
         </div>
       </div>
     </div>
-    <div style="background-color: red;" v-on:click="changeColor('red')">red</div>
-    <div style="background-color: green;" v-on:click="changeColor('green')">green</div>
-    <div style="background-color: blue;" v-on:click="changeColor('blue')">blue</div>
-    <div style="background-color: yellow;" v-on:click="changeColor('yellow')">yellow</div>
+    <div class="panel-row" style="width: 100%; height: 30px; padding-top: 30px;">
+      <div style="background-color: red;width: 20%; " v-on:click="changeColor('red')">red</div>
+      <div style="background-color: green; width: 20%;" v-on:click="changeColor('green')">green</div>
+      <div style="background-color: blue; width: 20%;" v-on:click="changeColor('blue')">blue</div>
+      <div style="background-color: yellow; width: 20%;" v-on:click="changeColor('yellow')">yellow</div>
+    </div>
   </div>
 </template>
 
@@ -56,11 +58,14 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  background-color: #2c3e50;
+  margin-top: 20px;
   height: 80vh;
 }
 .panel-row {
   display: flex;
+}
+html {
+  background-color: #2c3e50;
 }
 </style>

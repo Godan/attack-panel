@@ -31,7 +31,7 @@ export default {
   }
 
 }
-</script>
+</script> 
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
@@ -44,7 +44,7 @@ export default {
   vertical-align: middle;
 }
 .text {
-  font-size: 32px;
+  font-size: 42px;
   text-align: center;
   vertical-align: middle;
 }
